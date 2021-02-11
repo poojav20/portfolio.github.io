@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooja Vaidya</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Portfoliocss.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="image/panda.png" type="image/icon">
+</head>
+
+<body>
+    <div class="Container">
+        <div class="socialmedia">
+            <a href="https://wa.me/918655083927" class="whatsapp"><i class="fa fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/pooja__vaidya/" class="instagram"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/pooja-vaidya-85960a112/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        </div>
+
+        <div class="profilePic">
+            <img class="back" src="image/20190310_080735_0 (2).jpg" width="325" height="325" />
+            <img class="front" src="image/IMG_6471_2.jpg" width="325" height="325" />
+        </div>
+        <div class="intro">
+            <h1 class="start">
+                <span class="text-wrapper">
+                    <span class="line line1"></span>
+                    <span class="letters">Web Developer </span>
+                </span>
+            </h1>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        </div>
+
+        <div class="Menu">
+            <div class="buttonGrp">
+
+                <button class="menulink" onclick="openMenu('about',this,'transparent')" id="defaultOpen">About</button>
+                <button class="menulink" onclick="openMenu('skill',this,'transparent')">Skills</button>
+                <button class="menulink" onclick="openMenu('work', this,'transparent')">Work</button>
+            </div>
+        </div>
+       
+        <div id="about" class="menucontent">
+            <h2>
+                Hello,I'm Pooja from Mumbai.Interested in developing<br />user friendly and attractive websites.
+                Currently <br />looking for new oppoetunity!Needlless to say I'm preety<br />good at doing things
+                I like.If you are looking for a fun,<br />sincere and the best Web
+                Developer I'm the one you hire!
+            </h2>
+        </div>
+        <div id="skill" class="menucontent">
+            <img name="Javascript" src="image/javascript-logo.png" width="165" height="165" />
+            <img name="Javascript" src="image/php-solid.png" width="165" height="165" />
+            <img name="Javascript" src="image/html5-logo-html-logo-10.png" width="165" height="165" /><br />
+            <img name="Javascript" src="image/css.png" width="165" height="165" />
+            <img name="Javascript" src="image/WordPress-logotype-wmark-white.png" width="165" height="165" />   
+
+        </div>
+            <div id="work" class="menucontent">
+                <video width="300" controls>
+                    <source src="videos/Home - Google Chrome 2021-02-11 14-25-15.mp4" type="video/mp4">
+                    </video>
+                <video width="300" controls>
+                    <source src="videos/https___localhost_44336_MainView.aspx - Google Chrome 2021-02-11 14-20-27.mp4" type="audio/mp4" />
+                </video><br />
+                <video width="300" controls>
+                    <source src="videos/Login Page - Google Chrome 2021-02-11 14-22-05.mp4" type="audio/mp4" />
+                </video>
+               </div>
+        <script>
+            function openMenu(menuName, elmnt, color) {
+                var i, menucontent, menulinks;
+                menucontent = document.getElementsByClassName("menucontent");
+                for (i = 0; i < menucontent.length; i++) {
+                    menucontent[i].style.display = "none";
+                }
+                menulinks = document.getElementsByClassName("menulink");
+                for (i = 0; i < menulinks.length; i++) {
+                    menulinks[i].style.backgroundColor = "";
+                }
+                document.getElementById(menuName).style.display = "block";
+                elmnt.style.backgroundColor = color;
+
+            }
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+        <script>
+            var textWrapper = document.querySelector('.start .letters');
+            textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+            anime.timeline({ loop: true })
+                .add({
+                    targets: '.start .line',
+                    scaleY: [0, 1],
+                    opacity: [0.5, 1],
+                    easing: "easeOutExpo",
+                    duration: 700
+                })
+                .add({
+                    targets: '.start .line',
+                    translateX: [0, document.querySelector('.start .letters').getBoundingClientRect().width + 10],
+                    easing: "easeOutExpo",
+                    duration: 700,
+                    delay: 100
+                }).add({
+                    targets: '.start .letter',
+                    opacity: [0, 1],
+                    easing: "easeOutExpo",
+                    duration: 600,
+                    offset: '-=775',
+                    delay: (el, i) => 34 * (i + 1)
+                }).add({
+                    targets: '.start',
+                    opacity: 0,
+                    duration: 1000,
+                    easing: "easeOutExpo",
+                    delay: 1000
+                });
+        </script>
+        <div class='box'>
+            <div class='wave -one'></div>
+            <div class='wave -two'></div>
+            <div class='wave -three'></div>
+            <div class='wave -four'></div>
+            <div class='wave -five'></div>
+            <div class='wave -six'></div>
+        </div>
+
+    </div>
+</body>
+</html>

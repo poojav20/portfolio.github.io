@@ -1,0 +1,203 @@
+﻿*{
+    margin:0;
+    padding:0;
+}
+body {
+    background-image: url(image/bubble.svg);
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+}
+.Container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.buttonGrp {
+    position: relative;
+    left: 10%;
+    top:10%;
+    margin: 0;
+    display:block;
+  
+}
+
+.Menu {
+    top: 20%;
+    left:20%;    
+    margin: 0;
+    position: absolute;
+}
+.menulink {
+    width: 18vw;
+    background-color: transparent;
+    font-size: 2.5vw;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    color: whitesmoke;
+    padding: 18px 12px;
+}
+    .menulink:hover {
+        border-radius: 50%;
+        background-color: transparent;
+        color: cadetblue;
+        text-decoration: underline;
+        text-transform: lowercase;
+    }
+
+.menucontent {
+    color: white;
+    display: none;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+]
+#about{
+    background-color:transparent;
+    color:cadetblue;
+}
+h2 {
+    font-size: 2.7em;
+    float: right;
+}
+
+
+#skill {
+    background-color: transparent;
+    color: cadetblue;
+}
+#work {
+    background-color: transparent;
+    color: cadetblue;
+}
+.socialmedia {
+    position: fixed;
+    top: 20%;
+    right:0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.socialmedia a {
+    display: block;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 30px;
+}
+    .socialmedia a:hover {
+        background-color: #000;
+        color:lightblue;
+    }
+
+.profilePic {
+    left: 2%;
+    padding: 2%;
+    position: relative;
+    height: 250px;
+    width: 250px;
+}
+    .profilePic img {
+        transition: 2s;
+        position: absolute;
+        left: 0;
+        top: 20%;
+        border: groove black 2px;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+    }
+
+        .profilePic img.front:hover {
+            opacity: 0;
+            border-radius: 50%;
+         }
+        .intro{
+            position:relative;
+            top:12%;
+            color:whitesmoke;
+        }
+.start {
+    font-weight: 400;
+    font-size: 2.8em;
+}
+
+    .start .text-wrapper {
+        position: relative;
+        display: inline-block;
+        padding-top: 0.1em;
+        padding-right: 0.05em;
+        padding-bottom: 0.15em;
+    }
+
+    .start .line {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 3px;
+        background-color: #fff;
+        transform-origin: 0 50%;
+    }
+
+    .start .line1 {
+        top: 0;
+        left: 0;
+    }
+
+    .starts .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+.box {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    transform: rotate(80deg);
+    left: 0;
+}
+.wave {
+    position: absolute;
+    opacity: .4;
+    width: 2000px;
+    height: 2000px;
+    margin-left: -550px;
+    margin-top: -250px;
+    border-radius: 43%;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    from {
+        transform: rotate(360deg);
+    }
+}
+
+.wave.-one {
+    animation: rotate 4500ms infinite linear;
+    background-color: lawngreen;
+}
+
+.wave.-two {
+    animation: rotate 6000ms infinite linear;
+    background-color: yellow;
+}
+
+.wave.-three {
+    animation: rotate 5560ms infinite linear;
+    background-color: cadetblue;
+}
+.wave.-four{
+    animation: rotate 5300ms infinite linear;
+    background-color:#0e63b9;
+}
+.wave.-five{
+    animation:rotate 5400ms infinite linear;
+    background-color:#ba8cf6;
+}
+wave.-six{
+    animation: rotate 57000ms infinite linear;
+    background-color:#2afba7;
+}
